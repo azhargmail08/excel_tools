@@ -1,6 +1,8 @@
 import pandas as pd
 
-all_sheets = pd.read_excel(r"C:\Users\StudentQR\Desktop\SENARAI NAMA MURID 2025_2026 (1).xlsx", sheet_name=None)
+file_path = input("Enter the path to your Excel file: ").strip().strip('"').strip("'")
+
+all_sheets = pd.read_excel(file_path, sheet_name=None)
 
 df_lists = []
 for sheet_name, df in all_sheets.items():
