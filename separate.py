@@ -3,9 +3,9 @@ import os
 
 def separate_csv():
     # Get user input
-    csv_path = input("Enter the path to your CSV file: ")
+    csv_path = input("Enter the path to your CSV file: ").strip().strip('"').strip("'")
     column_name = input("Enter the column name to separate by: ")
-    output_dir = input("Enter the path where you want to save the Excel files: ").strip()
+    output_dir = input("Enter the path where you want to save the Excel files: ").strip().strip('"').strip("'")
 
     try:
         # Read CSV file
